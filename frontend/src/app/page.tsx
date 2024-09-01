@@ -13,7 +13,7 @@ export default function Home() {
     setLoading(true);
 
     try {
-      const { user, error } = await supabase.auth.signUp({
+      const { data, error } = await supabase.auth.signUp({
         email,
         password,
       });
@@ -22,6 +22,7 @@ export default function Home() {
         setMessage(`Error: ${error.message}`);
       } else {
         setMessage("Signup successful! Please check your email to confirm your account.");
+        console.log("User:", data.user);
       }
     } catch (error) {
       console.error("Error during signup:", error);
