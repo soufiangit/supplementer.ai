@@ -10,6 +10,10 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "@restackio/restack-sdk-cloud-ts": "^1.0.0"
+    "@restackio/restack-sdk-cloud-ts": "^1.0.1",
+    "@supabase/supabase-js": "^2.45.3",
+    "next": "^14.2.7",
+    "react": "^18.3.1",
+    "tailwind": "^4.0.0"
   }
 }
