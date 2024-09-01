@@ -4,7 +4,11 @@
   "description": "This repository is a sample project for helping you get started with Restack Cloud SDK. It showcases how to deploy applications, regardless of the programming language, in Restack and how they can communicate with each other.",
   "main": "restack_up.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
   },
   "type": "module",
   "author": "",
