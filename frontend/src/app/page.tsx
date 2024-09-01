@@ -1,6 +1,6 @@
 "use client";
 import React, { useState } from "react";
-import { supabase } from "./supabaseClient"; // Ensure you have this file setup as mentioned earlier
+import { supabase } from "../../../supabaseClient"; // Ensure you have this file setup as mentioned earlier
 
 export default function Home() {
   const [email, setEmail] = useState<string>("");
