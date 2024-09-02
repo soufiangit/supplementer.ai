@@ -2,11 +2,10 @@
 import React, { useState } from "react";
 import { createClient } from '@supabase/supabase-js';
 
-const supabaseUrl = process.env.REACT_APP_SUPABASE_URL;
-const supabaseAnonKey = process.env.REACT_APP_SUPABASE_ANON_KEY;
+const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL || '';
+const supabaseAnonKey = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY || '';
 
-export const supabase = createClient(supabaseUrl, supabaseAnonKey);
-   // Ensure you have this file setup as mentioned earlier
+const supabase = createClient(supabaseUrl, supabaseAnonKey);
 
 export default function Home() {
   const [email, setEmail] = useState<string>("");
@@ -26,9 +25,8 @@ export default function Home() {
 
       if (error) {
         setMessage(`Error: ${error.message}`);
-      } else {
+      } else if (data.user) {
         setMessage("Signup successful! Please check your email to confirm your account.");
-        console.log("User:", data.user);
       }
     } catch (error) {
       console.error("Error during signup:", error);
@@ -94,4 +92,3 @@ export default function Home() {
     </div>
   );
 }
-
