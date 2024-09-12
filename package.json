@@ -16,11 +16,13 @@
   "dependencies": {
     "@restackio/restack-sdk-cloud-ts": "^1.0.1",
     "@supabase/supabase-js": "^2.45.3",
+    "csv-parser": "^3.0.0",
     "next": "^14.2.7",
     "react": "^18.3.1",
     "tailwind": "^4.0.0"
   },
   "devDependencies": {
+    "supabase": "^1.191.3",
     "typescript": "5.5.4"
   }
 }
