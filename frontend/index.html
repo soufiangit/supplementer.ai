@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Supplement Recommendation</title>
+</head>
+<body>
+    <h1>Supplement Recommendation Form</h1>
+    <form action="/recommend" method="POST">
+        <label for="goals">Enter your health goals (comma-separated):</label>
+        <input type="text" id="goals" name="goals" required>
+        <br>
+
+        <label for="depth_level">Select Depth Level:</label>
+        <select id="depth_level" name="depth_level">
+            <option value="general">General</option>
+            <option value="specific">Specific</option>
+            <option value="precise">Precise</option>
+        </select>
+        <br>
+
+        <label for="use_gpt2">Use GPT-2 for more complex recommendations?</label>
+        <input type="checkbox" id="use_gpt2" name="use_gpt2">
+        <br>
+
+        <button type="submit">Get Recommendations</button>
+    </form>
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Supplement Recommendations</title>
+</head>
+<body>
+    <h1>Supplement Recommendations</h1>
+
+    <h2>Recommendations:</h2>
+    <ul>
+        {% for recommendation in recommendations %}
+        <li>{{ recommendation }}</li>
+        {% endfor %}
+    </ul>
+
+    {% if gpt2_response %}
+    <h2>GPT-2 Supplement Advice:</h2>
+    <p>{{ gpt2_response }}</p>
+    {% endif %}
+
+    <h2>Follow-up Questions:</h2>
+    <ul>
+        {% for question in questions %}
+        <li>{{ question }}</li>
+        {% endfor %}
+    </ul>
+
+    <br>
+    <a href="/">Go back to form</a>
+</body>
+</html>
